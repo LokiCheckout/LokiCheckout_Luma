@@ -1,0 +1,21 @@
+{
+    "name": "yireo/magento2-frigga-checkout-luma",
+    "version": "0.0.1",
+    "description": "Luma compatibility for Frigga Checkout",
+    "type": "magento2-module",
+    "require": {
+        "yireo/magento2-frigga-checkout": "@dev",
+        "magewirephp/magewire-requirejs": "^1.1"
+    },
+    "license": [
+        "OSL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Yireo\\FriggaCheckoutLuma\\": ""
+        }
+    }
+}
