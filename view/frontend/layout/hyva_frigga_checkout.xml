@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <head>
+        <remove src="Yireo_FriggaCheckoutLuma/js/alpine3.min.js"/>
+    </head>
+    
     <body>
         <referenceBlock name="frigga.checkout.requirejs" remove="true"/>
     </body>
