@@ -3,7 +3,7 @@
     <head>
         <remove src="Yireo_FriggaCheckoutLuma/js/alpine3.min.js"/>
     </head>
-    
+
     <body>
         <referenceBlock name="frigga.checkout.requirejs" remove="true"/>
     </body>
