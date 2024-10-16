@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <head>
-        <remove src="Yireo_FriggaCheckoutLuma/js/alpine3.min.js"/>
+        <remove src="Yireo_LokiCheckoutLuma/js/alpine3.min.js"/>
     </head>
 
     <body>
-        <referenceBlock name="frigga.checkout.requirejs" remove="true"/>
+        <referenceBlock name="loki.checkout.requirejs" remove="true"/>
     </body>
 </page>

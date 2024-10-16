@@ -1,4 +1,4 @@
-# Yireo FriggaCheckoutLuma
+# Yireo LokiCheckoutLuma
 
-**Luma compatibility for Yireo FriggaCheckout**
+**Luma compatibility for Yireo LokiCheckout**
 

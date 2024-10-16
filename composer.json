@@ -1,10 +1,10 @@
 {
-    "name": "yireo/magento2-frigga-checkout-luma",
+    "name": "yireo/magento2-loki-checkout-luma",
     "version": "0.0.1",
-    "description": "Luma compatibility for Frigga Checkout",
+    "description": "Luma compatibility for Loki Checkout",
     "type": "magento2-module",
     "require": {
-        "yireo/magento2-frigga-checkout": "@dev",
+        "yireo/magento2-loki-checkout": "@dev",
         "magewirephp/magewire-requirejs": "^1.1"
     },
     "license": [
@@ -15,7 +15,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Yireo\\FriggaCheckoutLuma\\": ""
+            "Yireo\\LokiCheckoutLuma\\": ""
         }
     }
 }
