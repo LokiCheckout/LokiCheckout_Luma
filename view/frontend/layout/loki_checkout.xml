@@ -7,7 +7,7 @@
     <body>
         <referenceContainer name="before.body.end">
             <block name="loki.checkout.requirejs" template="Yireo_LokiCheckoutLuma::requirejs.phtml"/>
-            <block name="loki.checkout.requirejs" template="Yireo_LokiCheckoutLuma::alpinejs.phtml"/>
+            <block name="loki.checkout.alpinejs" template="Yireo_LokiCheckoutLuma::alpinejs.phtml"/>
         </referenceContainer>
     </body>
 </page>
