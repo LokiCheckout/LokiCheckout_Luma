@@ -1,12 +1,9 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
-    <head>
-        <script src="Yireo_LokiCheckoutLuma/js/alpine3.min.js"/>
-    </head>
-
     <body>
         <referenceContainer name="before.body.end">
             <block name="loki.checkout.requirejs" template="Yireo_LokiCheckoutLuma::requirejs.phtml"/>
+            <block name="loki.checkout.requirejs" template="Yireo_LokiCheckoutLuma::alpinejs.phtml"/>
         </referenceContainer>
     </body>
 </page>
