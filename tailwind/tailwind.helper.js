@@ -1,4 +1,7 @@
-const { spacing: twSpacing } = require("tailwindcss/defaultTheme");
+const {
+    spacing: twSpacing,
+    borderRadius: twRadius,
+} = require("tailwindcss/defaultTheme");
 
 function convertLumaUnit(value) {
     const remNumber = parseFloat(value);
@@ -21,6 +24,7 @@ function convertLumaSpacing(object) {
 }
 
 const spacing = convertLumaSpacing(twSpacing);
+const borderRadius = convertLumaSpacing(twRadius);
 const fontSize = {
     xs: [convertLumaUnit("0.75rem"), { lineHeight: convertLumaUnit("1rem") }],
     sm: [
@@ -52,4 +56,4 @@ const fontSize = {
     "9xl": [convertLumaUnit("8rem"), { lineHeight: "1" }],
 };
 
-module.exports = { spacing, fontSize };
+module.exports = { spacing, fontSize, borderRadius };

@@ -1,4 +1,4 @@
-const { spacing, fontSize } = require("./tailwind.helper");
+const { spacing, fontSize, borderRadius } = require("./tailwind.helper");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -18,6 +18,7 @@ module.exports = {
     theme: {
         spacing,
         fontSize,
+        borderRadius,
     },
     corePlugins: {
         preflight: false,

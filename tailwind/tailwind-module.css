@@ -4,6 +4,9 @@
 
 @layer base {
     :where(.loki-checkout) {
+        --select-light-scheme: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="hsl(0 0% 0%)"><path d="m6 9 6 6 6-6"/></svg>');
+        --select-dark-scheme: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="hsl(0 0% 100%)"><path d="m6 9 6 6 6-6"/></svg>');
+
         & *,
         & ::before,
         & ::after {
@@ -13,14 +16,40 @@
             border-color: theme("borderColor.DEFAULT", currentColor);
         }
 
+        & ::before,
+        & ::after {
+            --tw-content: "";
+        }
+
         /* Mimic the TailwindCSS preflight */
-        & :is(blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre) {
+        &
+            :is(
+                blockquote,
+                dl,
+                dd,
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                hr,
+                figure,
+                p,
+                pre,
+                :is(ul, ol) > li
+            ) {
             margin: 0;
         }
 
         & :is(h1, h2, h3, h4, h5, h6) {
             font-size: inherit;
             font-weight: inherit;
+        }
+
+        & a {
+            color: inherit;
+            text-decoration: inherit;
         }
 
         & :is(ol, ul) {
@@ -32,6 +61,66 @@
         & :is(img, svg, video, canvas, audio, iframe, embed, object) {
             display: block;
             vertical-align: middle;
+        }
+
+        & :is(button, input, optgroup, select, textarea) {
+            margin: 0;
+            padding: 0;
+            font: inherit;
+            font-feature-settings: inherit;
+            font-variation-settings: inherit;
+            letter-spacing: inherit;
+            background: transparent;
+            color: inherit;
+        }
+
+        & :is(button, select) {
+            text-transform: none;
+        }
+
+        & button:is(:hover, :focus, :active) {
+            border: 0;
+            background: transparent;
+            color: inherit;
+        }
+
+        &
+            :is(
+                button,
+                input:where([type="button"]),
+                input:where([type="reset"]),
+                input:where([type="submit"])
+            ) {
+            -webkit-appearance: button;
+            background-color: transparent;
+            background-image: none;
+            border: 0;
+        }
+
+        & summary {
+            display: list-item;
+        }
+
+        /* Mimic tailwind forms */
+        input.form-input,
+        form-textarea,
+        .form-select,
+        .form-multiselect {
+            @apply appearance-none h-auto bg-white py-2 px-3 text-base rounded;
+        }
+
+        .form-select {
+            --icon-size: var(--select-icon-size, 1.25em);
+            --icon-offset: var(--select-icon-offset, 0.8rem);
+            padding-inline-end: calc(
+                var(--icon-size) + var(--icon-offset) + 0.5ch
+            );
+            background: var(--select-icon, var(--select-light-scheme))
+                var(--form-bg, theme("colors.white"))
+                var(--icon-position, right) var(--icon-offset)
+                center/var(--icon-size) no-repeat;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
     }
 }
