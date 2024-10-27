@@ -8,6 +8,5 @@ To apply, add <update handle="loki_checkout_tailwind"/> to a default.xml layout 
         <remove src="css/styles-m.css"/>
         <remove src="css/styles-l.css"/>
         <remove src="css/print.css"/>
-        <css src="Yireo_LokiCheckoutLuma/css/tailwind.css"/>
     </head>
 </page>
