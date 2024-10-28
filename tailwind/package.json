@@ -1,0 +1,21 @@
+{
+  "name": "@yireo/magento2-loki-checkout-luma",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Yireo",
+  "license": "proprietary",
+  "private": true,
+  "dependencies": {
+    "postcss": "^8.4.47",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^10.0.8",
+    "tailwindcss": "^3.4.13"
+  },
+  "browserslist": [
+    "> 0.2% and not dead"
+  ],
+  "scripts": {
+    "start": "npx tailwindcss --postcss -i tailwind-module.css -o ../view/frontend/web/css/tailwind.css --watch --verbose",
+    "build": "npx tailwindcss --postcss -i tailwind-module.css -o ../view/frontend/web/css/tailwind.css --minify"
+  }
+}

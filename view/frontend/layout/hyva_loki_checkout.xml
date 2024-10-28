@@ -2,9 +2,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <head>
         <remove src="Yireo_LokiCheckoutLuma/js/alpine3.min.js"/>
+        <remove src="Yireo_LokiCheckoutLuma/css/tailwind.css"/>
     </head>
 
     <body>
         <referenceBlock name="loki.checkout.requirejs" remove="true"/>
+        <referenceBlock name="loki.checkout.alpinejs" remove="true"/>
     </body>
 </page>

@@ -1,0 +1,15 @@
+@card-padding: 1.6rem;
+@card-radius: 0.25rem;
+@card-bg: @color-gray95;
+@card-color: false;
+@card-shadow: 0 3px 1px -2px fade(gray, 21%), 0 2px 2px fade(gray, 15%), 0 1px 5px fade(gray, 13%);
+
+& when (@media-common = true) {
+    .card {
+        .lib-css(padding, @card-padding);
+        .lib-css(border-radius, @card-radius);
+        .lib-css(box-shadow, @card-shadow);
+        .lib-css(background-color, @card-bg);
+        .lib-css(color, @card-color);
+    }
+}
