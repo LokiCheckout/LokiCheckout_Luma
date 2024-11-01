@@ -7,9 +7,15 @@ use Yireo\LokiCheckoutLuma\ViewModel\RequiredModulesCheck;
 /** @var ViewModelFactory $viewModelFactory */
 /** @var RequiredModulesCheck $requiredModulesCheck */
 $requiredModulesCheck = $viewModelFactory->create(RequiredModulesCheck::class);
-$requiredModulesCheck();
+$errors = $requiredModulesCheck->getErrors();
+if (empty($errors)) {
+    return;
+}
 ?>
-
-<script>
-    require(['magewire'], function() {});
-</script>
+<div class="messages">
+    <?php foreach ($errors as $error): ?>
+    <div class="message error">
+        <span><?= $error ?></span>
+    </div>
+    <?php endforeach; ?>
+</div>

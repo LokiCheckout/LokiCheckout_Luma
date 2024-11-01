@@ -5,9 +5,14 @@
     </head>
 
     <body>
+        <referenceContainer name="content">
+            <block name="loki.checkout.required_modules" template="Yireo_LokiCheckoutLuma::required_modules.phtml" before="-"/>
+        </referenceContainer>
+
         <referenceContainer name="before.body.end">
-            <block name="loki.checkout.requirejs" template="Yireo_LokiCheckoutLuma::requirejs.phtml"/>
             <block name="loki.checkout.alpinejs" template="Yireo_LokiCheckoutLuma::alpinejs.phtml"/>
         </referenceContainer>
+
+        <referenceBlock name="head.magewire-init" template="Yireo_LokiCheckoutLuma::magewire-config.phtml"/>
     </body>
 </page>
