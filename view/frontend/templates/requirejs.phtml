@@ -1,3 +1,15 @@
+<?php
+declare(strict_types=1);
+
+use Yireo\LokiCheckout\Factory\ViewModelFactory;
+use Yireo\LokiCheckoutLuma\ViewModel\RequiredModulesCheck;
+
+/** @var ViewModelFactory $viewModelFactory */
+/** @var RequiredModulesCheck $requiredModulesCheck */
+$requiredModulesCheck = $viewModelFactory->create(RequiredModulesCheck::class);
+$requiredModulesCheck();
+?>
+
 <script>
     require(['magewire'], function() {});
 </script>
