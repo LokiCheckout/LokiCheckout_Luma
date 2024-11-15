@@ -1,21 +1,28 @@
 {
-    "name": "yireo/magento2-loki-checkout-luma",
-    "version": "0.0.1",
-    "description": "Luma compatibility for Loki Checkout",
-    "type": "magento2-module",
-    "require": {
-        "yireo/magento2-loki-checkout": "@dev",
-        "magewirephp/magewire-requirejs": "^1.1"
-    },
-    "license": [
-        "OSL-3.0"
-    ],
-    "autoload": {
-        "files": [
-            "registration.php"
-        ],
-        "psr-4": {
-            "Yireo\\LokiCheckoutLuma\\": ""
-        }
+  "name": "yireo/magento2-loki-checkout-luma",
+  "version": "0.0.1",
+  "description": "Luma compatibility for Loki Checkout",
+  "homepage": "https://loki-checkout.com/",
+  "authors": [
+    {
+      "name": "Jisse Reitsma (Yireo)",
+      "email": "jisse@yireo.com"
     }
+  ],
+  "type": "magento2-module",
+  "require": {
+    "yireo/magento2-loki-checkout": "@dev",
+    "magewirephp/magewire-requirejs": "^1.1"
+  },
+  "license": [
+    "OSL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Yireo\\LokiCheckoutLuma\\": ""
+    }
+  }
 }
