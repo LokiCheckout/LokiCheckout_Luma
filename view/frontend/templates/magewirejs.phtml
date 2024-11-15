@@ -1,0 +1,14 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+?>
+<script
+    type="module"
+    src="<?= $escaper->escapeUrl($block->getViewFileUrl("Magewirephp_Magewire::js/livewire.js")) ?>"
+    crossorigin
+></script>

@@ -10,7 +10,7 @@
         </referenceContainer>
 
         <referenceContainer name="before.body.end">
-            <block name="loki.checkout.alpinejs" template="Yireo_LokiCheckoutLuma::alpinejs.phtml"/>
+            <block name="loki.checkout.alpinejs" template="Yireo_LokiCheckoutLuma::alpinejs.phtml" after="-"/>
         </referenceContainer>
 
         <referenceBlock name="head.magewire-init" template="Yireo_LokiCheckoutLuma::magewire-config.phtml"/>

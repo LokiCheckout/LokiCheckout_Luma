@@ -11,7 +11,9 @@ use Yireo\LokiCheckout\Factory\ViewModelFactory;
 $magewireScripts = $viewModelFactory->create(Magewire::class);
 ?>
 <script>
-    require(['Magewirephp_MagewireRequireJs/js/magewire'], function (magewire) {
+    require([
+        'Magewirephp_MagewireRequireJs/js/magewire',
+    ], function (magewire) {
         magewire({
             "app_url": "<?= $escaper->escapeUrl($magewireScripts->getApplicationUrl()) ?>",
             "app_debug": <?= $escaper->escapeJs($magewireScripts->isDeveloperMode() ? 'true' : 'false') ?>
