@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <referenceBlock name="loki.checkout.requirejs" remove="true"/>
-        <referenceBlock name="loki.checkout.alpinejs" remove="true"/>
+        <referenceBlock name="loki-checkout.requirejs" remove="true"/>
+        <referenceBlock name="loki-checkout.alpinejs" remove="true"/>
     </body>
 </page>
