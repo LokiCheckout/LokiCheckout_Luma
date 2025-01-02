@@ -15,9 +15,11 @@ class RequiredModulesCheck implements ArgumentInterface
     public function getErrors(): array
     {
         $errors = [];
-        $moduleName = 'Magewirephp_MagewireRequireJs';
-        if (false === $this->moduleManager->isEnabled($moduleName)) {
-            $errors[] = __('The module "%1" is required but not enabled', $moduleName);
+        $requiredModules = ['Yireo_LokiCheckout'];
+        foreach ($requiredModules as $requiredModule) {
+            if (false === $this->moduleManager->isEnabled($requiredModule)) {
+                $errors[] = __('The module "%1" is required but not enabled', $requiredModule);
+            }
         }
 
         return $errors;

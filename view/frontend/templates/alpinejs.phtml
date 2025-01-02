@@ -8,9 +8,9 @@ use Magento\Framework\View\Element\Template;
 /** @var Escaper $escaper */
 ?>
 <script>
-    document.addEventListener('magewire:load', () => {
+    (() => {
         const script = document.createElement('script');
         script.src = '<?= $escaper->escapeUrl($block->getViewFileUrl("Yireo_LokiCheckoutLuma::js/alpine3.min.js")) ?>';
         document.head.append(script);
-    });
+    })();
 </script>

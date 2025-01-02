@@ -11,8 +11,7 @@
   ],
   "type": "magento2-module",
   "require": {
-    "yireo/magento2-loki-checkout": "@dev",
-    "magewirephp/magewire-requirejs": "^1.1"
+    "yireo/magento2-loki-checkout": "@dev"
   },
   "license": [
     "OSL-3.0"
