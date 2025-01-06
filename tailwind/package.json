@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "author": "Yireo",
-  "license": "proprietary",
+  "license": "OSL-3.0",
   "private": true,
   "dependencies": {
+    "ini": "^5.0.0",
+    "node-ini": "^1.0.0",
     "postcss": "^8.4.47",
     "postcss-import": "^16.1.0",
     "postcss-preset-env": "^10.0.8",
