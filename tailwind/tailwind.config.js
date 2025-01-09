@@ -7,7 +7,7 @@ var config = ini.parse(fs.readFileSync('./config.ini', 'utf-8'));
 
 const getModulePath = (moduleName) => {
     // @todo: Do this only once
-    const command = config.magento_root + '/bin/magento yireo:module-path ' + moduleName;
+    const command = config.magento_root + '/bin/magento yireo:loki-checkout-luma:module-path ' + moduleName;
     const output = execSync(command).toString().trim();
     return output;
 }
