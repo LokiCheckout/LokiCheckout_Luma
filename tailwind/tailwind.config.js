@@ -14,9 +14,9 @@ const getModulePath = (moduleName) => {
 
 const moduleFolders = [];
 config.modules.forEach(module => {
-    moduleFolders.push(getModulePath('Yireo_LokiCheckout') + "/view/frontend/templates/**/*.phtml");
-    moduleFolders.push(getModulePath('Yireo_LokiCheckout') + "/view/frontend/layout/*.xml");
-    moduleFolders.push(getModulePath('Yireo_LokiCheckout') + "/etc/loki_checkout.xml");
+    moduleFolders.push(getModulePath(module) + "/view/frontend/templates/**/*.phtml");
+    moduleFolders.push(getModulePath(module) + "/view/frontend/layout/*.xml");
+    moduleFolders.push(getModulePath(module) + "/etc/loki_checkout.xml");
 });
 
 /** @type {import('tailwindcss').Config} */
@@ -26,12 +26,12 @@ module.exports = {
         "./view/frontend/templates/**/*.phtml",
         "./view/frontend/layout/*.xml",
     ],
-    safelist: [
+    /*safelist: [
         "loki-checkout",
         {
             pattern: /col-span-(1|2|3|4|5|6|7|8|9|10|11|12)/,
         },
-    ],
+    ],*/
     important: ":where(.loki-checkout)",
     theme: {
         spacing,
