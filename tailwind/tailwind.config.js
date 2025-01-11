@@ -4,34 +4,27 @@ const ini = require('ini');
 const fs = require('fs');
 
 var config = ini.parse(fs.readFileSync('./config.ini', 'utf-8'));
-
-const getModulePath = (moduleName) => {
-    // @todo: Do this only once
-    const command = config.magento_root + '/bin/magento yireo:loki-checkout-luma:module-path ' + moduleName;
-    const output = execSync(command).toString().trim();
-    return output;
+if (!config.magento_root || !fs.existsSync(config.magento_root)) {
+    console.error('Non existing Magento root');
+    process.exit();
 }
 
-const moduleFolders = [];
-config.modules.forEach(module => {
-    moduleFolders.push(getModulePath(module) + "/view/frontend/templates/**/*.phtml");
-    moduleFolders.push(getModulePath(module) + "/view/frontend/layout/*.xml");
-    moduleFolders.push(getModulePath(module) + "/etc/loki_checkout.xml");
-});
+const getModulePaths = (moduleNames) => {
+    const command = config.magento_root
+        + '/bin/magento yireo:loki-checkout-luma:module-path '
+        + moduleNames.join(',');
+    return execSync(command).toString().trim();
+}
+
+const modulePaths = getModulePaths(config.modules).split("\n");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        ...moduleFolders,
+        ...modulePaths,
         "./view/frontend/templates/**/*.phtml",
         "./view/frontend/layout/*.xml",
     ],
-    /*safelist: [
-        "loki-checkout",
-        {
-            pattern: /col-span-(1|2|3|4|5|6|7|8|9|10|11|12)/,
-        },
-    ],*/
     important: ":where(.loki-checkout)",
     theme: {
         spacing,

@@ -5,6 +5,7 @@ namespace Yireo\LokiCheckoutLuma\Console\Command;
 use Composer\Console\Input\InputArgument;
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Component\ComponentRegistrar;
+use Magento\Framework\Filesystem\Directory\ReadFactory;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -14,6 +15,8 @@ class ModulePathCommand extends Command
     public function __construct(
         private ComponentRegistrar $componentRegistrar,
         private DirectoryList $directoryList,
+        private ReadFactory $directoryReadFactory,
+        private array $relativePaths = [],
         $name = null
     ) {
         parent::__construct($name);
@@ -28,14 +31,38 @@ class ModulePathCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $moduleName = (string)$input->getArgument('module');
-        $modulePath = $this->componentRegistrar->getPath(ComponentRegistrar::MODULE, $moduleName);
+        $directoryRead = $this->directoryReadFactory->create('/');
 
-        if (false === preg_match('/^\//', $modulePath)) {
-            $modulePath = $this->directoryList->getRoot() . $modulePath;
+        $moduleNames = (string)$input->getArgument('module');
+        $moduleNames = explode(',', $moduleNames);
+
+        $paths = [];
+
+        foreach ($moduleNames as $moduleName) {
+            $modulePath = $this->componentRegistrar->getPath(ComponentRegistrar::MODULE, $moduleName);
+            if (empty($modulePath)) {
+                continue;
+            }
+
+            if (false === str_starts_with($modulePath, '/')) {
+                $modulePath = $this->directoryList->getRoot().$modulePath;
+            }
+
+            if (false === $directoryRead->isDirectory($modulePath)) {
+                continue;
+            }
+
+            foreach ($this->relativePaths as $relativePath => $relativePathExpression) {
+                $path = $modulePath.'/'.$relativePath;
+                if ($directoryRead->isDirectory($path) || $directoryRead->isFile($path)) {
+                    $paths[] = $modulePath.'/'.$relativePathExpression;
+                }
+            }
         }
 
-        $output->writeln($modulePath);
+        foreach ($paths as $path) {
+            $output->writeln($path);
+        }
 
         return Command::SUCCESS;
     }
