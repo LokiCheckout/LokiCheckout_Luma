@@ -5,11 +5,12 @@
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="yireo:loki-checkout-luma:module-path" xsi:type="object">Yireo\LokiCheckoutLuma\Console\Command\ModulePathCommand</item>
+                <item name="yireo:loki-checkout-luma:import-css" xsi:type="object">Yireo\LokiCheckoutLuma\Console\Command\ImportCssCommand</item>
             </argument>
         </arguments>
     </type>
 
-    <type name="\Yireo\LokiCheckoutLuma\Console\Command\ModulePathCommand">
+    <type name="Yireo\LokiCheckoutLuma\Console\Command\ModulePathCommand">
         <arguments>
             <argument name="relativePaths" xsi:type="array">
                 <item name="etc/loki_checkout.xml" xsi:type="string">etc/loki_checkout.xml</item>

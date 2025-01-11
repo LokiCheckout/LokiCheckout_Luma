@@ -240,6 +240,128 @@
   print-color-adjust: exact;
 }
 
+.btn:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 113 122 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.btn:disabled:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 161 170 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+[data-type="label"],
+    [data-type="field"] {
+  /*
+        @doc
+        &[aria-invalid=false] {
+            @apply border-green-500;
+        }
+        */
+}
+
+[data-type="label"][aria-invalid=true], [data-type="field"][aria-invalid=true] {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+/*
+    @doc: See step.phtml
+    .loki-checkout-progressbar {
+        .step {
+            position:relative;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .step:first-child {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        .step:after {
+            content:"|";
+            position:absolute;
+            left: -10px;
+        }
+
+        .step:first-child:after {
+            content:"";
+        }
+    }
+     */
+
+[aria-busy] > .loader-overlay {
+  display: flex;
+}
+
+[aria-busy] > .loader {
+  display: block;
+}
+
+[aria-busy].field .field-loader {
+  display: flex;
+}
+
+/*
+    [aria-busy] {
+        --loading-size: 64px;
+        --loading-stroke: 6px;
+        --loading-duration: 1s;
+        position: relative;
+        opacity: .75
+    }
+
+    [aria-busy]:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--loading-size);
+        height: var(--loading-size);
+        margin-top: calc(var(--loading-size) / 2 * -1);
+        margin-left: calc(var(--loading-size) / 2 * -1);
+        border: var(--loading-stroke) solid rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+        border-top-color: rgba(0, 0, 0, 0.5);
+        animation: rotate calc(var(--loading-duration)) linear infinite;
+    }
+
+    @keyframes rotate {
+        100% { transform: rotate(360deg); }
+    }
+     */
+
+.loki-components-messages .error {
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity));
+}
+
+.loki-components-messages .warning {
+  --tw-text-opacity: 1;
+  color: rgb(194 65 12 / var(--tw-text-opacity));
+}
+
+.loki-components-messages .notice {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
+.loki-components-messages .success {
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity));
+}
+
 :where(.loki-checkout) .sr-only {
   position: absolute;
   width: 1px;

@@ -26,14 +26,14 @@ class ModulePathCommand extends Command
     {
         $this->setName('yireo:loki-checkout-luma:module-path');
         $this->setDescription('Return the module path');
-        $this->addArgument('module', InputArgument::REQUIRED, 'Module name');
+        $this->addArgument('modules', InputArgument::REQUIRED, 'Module names');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $directoryRead = $this->directoryReadFactory->create('/');
 
-        $moduleNames = (string)$input->getArgument('module');
+        $moduleNames = (string)$input->getArgument('modules');
         $moduleNames = explode(',', $moduleNames);
 
         $paths = [];

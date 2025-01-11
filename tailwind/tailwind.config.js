@@ -1,22 +1,24 @@
 const {spacing, fontSize, borderRadius} = require("./tailwind.helper");
 const {execSync} = require('child_process');
 const ini = require('ini');
+const path = require('path');
 const fs = require('fs');
 
-var config = ini.parse(fs.readFileSync('./config.ini', 'utf-8'));
-if (!config.magento_root || !fs.existsSync(config.magento_root)) {
-    console.error('Non existing Magento root');
-    process.exit();
-}
+const configIni = path.resolve('./config.ini');
+const configResolver = require('./lib/config');
+const config = configResolver(configIni);
+
+const magentoRootResolver = require('./lib/magento-root');
+const magentoRoot = magentoRootResolver(configIni);
 
 const getModulePaths = (moduleNames) => {
-    const command = config.magento_root
+    const command = magentoRoot
         + '/bin/magento yireo:loki-checkout-luma:module-path '
         + moduleNames.join(',');
-    return execSync(command).toString().trim();
+    return execSync(command).toString().trim().split("\n");
 }
 
-const modulePaths = getModulePaths(config.modules).split("\n");
+const modulePaths = getModulePaths(config.modules);
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
