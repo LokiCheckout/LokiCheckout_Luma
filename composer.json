@@ -13,9 +13,7 @@
   "require": {
     "yireo/magento2-loki-checkout": "@dev"
   },
-  "license": [
-    "OSL-3.0"
-  ],
+  "license": "OSL-3.0",
   "autoload": {
     "files": [
       "registration.php"
