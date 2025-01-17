@@ -17,8 +17,8 @@
   ],
   "scripts": {
     "start": "npx tailwindcss --postcss -i tailwind-module.css -o ../view/frontend/web/css/tailwind.css --watch --verbose",
-    "build": "npx tailwindcss --postcss -i tailwind-module.css -o ../view/frontend/web/css/tailwind.css",
-    "build2": "npx tailwindcss --postcss -i tailwind-module.css -o ../view/frontend/web/css/tailwind.css --minif"
+    "devbuild": "npx tailwindcss --postcss -i tailwind-module.css -o ../view/frontend/web/css/tailwind.css",
+    "build": "npx tailwindcss --postcss -i tailwind-module.css -o ../view/frontend/web/css/tailwind.css --minify"
   },
   "devDependencies": {
     "postcss-import": "^16.1.0"
