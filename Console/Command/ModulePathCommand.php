@@ -9,6 +9,7 @@ use Magento\Framework\Filesystem\Directory\ReadFactory;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Yireo\LokiCheckout\Config\LokiCheckoutModules;
 
 class ModulePathCommand extends Command
 {
@@ -16,6 +17,7 @@ class ModulePathCommand extends Command
         private ComponentRegistrar $componentRegistrar,
         private DirectoryList $directoryList,
         private ReadFactory $directoryReadFactory,
+        private LokiCheckoutModules $lokiCheckoutModules,
         private array $relativePaths = [],
         $name = null
     ) {
@@ -26,15 +28,13 @@ class ModulePathCommand extends Command
     {
         $this->setName('yireo:loki-checkout-luma:module-path');
         $this->setDescription('Return the module path');
-        $this->addArgument('modules', InputArgument::REQUIRED, 'Module names');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $directoryRead = $this->directoryReadFactory->create('/');
 
-        $moduleNames = (string)$input->getArgument('modules');
-        $moduleNames = explode(',', $moduleNames);
+        $moduleNames = $this->lokiCheckoutModules->getActiveModules();
 
         $paths = [];
 
