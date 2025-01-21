@@ -6,7 +6,7 @@ module.exports = (configFile) => {
 
     let magentoRoot = config.magentoRoot;
     if (!magentoRoot) {
-        magentoRoot = '../../../../';
+        magentoRoot = '../../../../../../';
     }
 
     if (!magentoRoot) {

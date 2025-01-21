@@ -1,4 +1,4 @@
-magentoRoot=../../../../
+magentoRoot=../../../../../../
 modules[]=Yireo_LokiComponents
 modules[]=Yireo_LokiComponentsDebugger
 modules[]=Yireo_LokiCheckout
