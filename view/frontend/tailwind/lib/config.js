@@ -3,7 +3,7 @@ const fs = require('fs');
 
 module.exports = (configFile) => {
     if (!fs.existsSync(configFile)) {
-        console.warning('No configuration file found: ' + configFile);
+        console.warn('No configuration file found: ' + configFile);
         return {};
     }
 
