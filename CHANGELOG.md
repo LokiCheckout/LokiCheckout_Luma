@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.4] - 3 February 2025
+### Fixed
+- Bump
+
+## [0.0.3] - 3 February 2025
+### Fixed
+- Lower composer dep to 2.2
+
 ## [0.0.2] - 21 January 2025
 ### Fixed
 - Add proper dependencies in composer.json and module.xml
