@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.5] - 13 February 2025
+### Fixed
+- Skip Hyva compilation because this is not meant for Hyva
+
 ## [0.0.4] - 3 February 2025
 ### Fixed
 - Bump
