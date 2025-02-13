@@ -9,6 +9,14 @@
         </arguments>
     </type>
 
+    <type name="Yireo\HyvaThemeAutoRegistration\Observer\RegisterModuleForHyvaConfig">
+        <arguments>
+            <argument name="skipModules" xsi:type="array">
+                <item name="Yireo_LokiCheckoutLuma" xsi:type="string">Yireo_LokiCheckoutLuma</item>
+            </argument>
+        </arguments>
+    </type>
+
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
