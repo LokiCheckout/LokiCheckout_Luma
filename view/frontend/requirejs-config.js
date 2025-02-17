@@ -1,0 +1,26 @@
+var config = {
+    paths: {
+        'Magento_Checkout/js/model/shipping-service': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/action/select-shipping-method': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/action/select-billing-address': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/action/create-billing-address': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/checkout-data': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_InventoryInStorePickupFrontend/js/checkout-data-ext': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/payment-service': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/action/select-payment-method': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/new-customer-address': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/payment/method-list': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/action/set-payment-information-extended': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/action/get-totals': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/default-post-code-resolver': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/payment/place-order-hooks': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/totals': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/shipping-rate-registry': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/shipping-rate-processor/new-address': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/shipping-rate-processor/customer-address': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/quote': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/resource-url-manager': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/error-processor': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_Checkout/js/model/url-builder': 'Yireo_LokiCheckoutLuma/js/empty',
+    }
+};
