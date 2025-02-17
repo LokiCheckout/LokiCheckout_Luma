@@ -22,5 +22,9 @@ var config = {
         'Magento_Checkout/js/model/resource-url-manager': 'Yireo_LokiCheckoutLuma/js/empty',
         'Magento_Checkout/js/model/error-processor': 'Yireo_LokiCheckoutLuma/js/empty',
         'Magento_Checkout/js/model/url-builder': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_PageBuilder/js/widget-initializer': 'Yireo_LokiCheckoutLuma/js/empty',
+        'PayPal_Braintree/js/view/payment/adapter': 'Yireo_LokiCheckoutLuma/js/empty',
+        'PayPal_Braintree/js/checkoutAgreements/view/checkout-agreements-mixin': 'Yireo_LokiCheckoutLuma/js/empty',
+        'Magento_CheckoutAgreements/js/view/checkout-agreements': 'Yireo_LokiCheckoutLuma/js/empty',
     }
 };
