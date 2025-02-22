@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.6] - 22 February 2025
+### Fixed
+-  Change deps
+-  Rip more Luma JS
+-  Rip more scripts from Luma
+
 ## [0.0.5] - 13 February 2025
 ### Fixed
 - Skip Hyva compilation because this is not meant for Hyva
