@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.7] - 11 March 2025
+### Fixed
+- Fix issue with grid CSS classes
+
 ## [0.0.6] - 22 February 2025
 ### Fixed
 -  Change deps
