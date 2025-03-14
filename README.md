@@ -2,8 +2,6 @@
 
 **This is the core package for compatibility of the LokiCheckout with Luma.**
 
-Current status: Stable
-
 ## Installation
 Install this package via composer (assuming you have setup the `composer.yireo.com` repository correctly already):
 ```bash
