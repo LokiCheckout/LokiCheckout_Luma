@@ -2,6 +2,7 @@
   "name": "yireo/magento2-loki-checkout-luma",
   "version": "0.0.7",
   "description": "Luma compatibility for Loki Checkout",
+  "keywords": ["loki-core"],
   "homepage": "https://loki-checkout.com/",
   "authors": [
     {
