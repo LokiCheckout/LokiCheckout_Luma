@@ -20,7 +20,6 @@
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
-                <item name="yireo:loki-checkout-luma:module-path" xsi:type="object">Yireo\LokiCheckoutLuma\Console\Command\ModulePathCommand</item>
                 <item name="yireo:loki-checkout-luma:import-css" xsi:type="object">Yireo\LokiCheckoutLuma\Console\Command\ImportCssCommand</item>
             </argument>
         </arguments>
