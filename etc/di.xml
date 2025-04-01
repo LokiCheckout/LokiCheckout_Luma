@@ -25,7 +25,7 @@
         </arguments>
     </type>
 
-    <type name="Yireo\LokiCheckoutLuma\Console\Command\ModulePathCommand">
+    <type name="Yireo\LokiCheckout\Console\Command\ModulePathCommand">
         <arguments>
             <argument name="relativePaths" xsi:type="array">
                 <item name="etc/loki_checkout.xml" xsi:type="string">etc/loki_checkout.xml</item>
