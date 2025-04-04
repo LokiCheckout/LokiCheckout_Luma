@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.8] - 04 April 2025
+### Fixed
+- Move module-path command from Luma module to core module
+- Wrap existing LESS in when-common
+
 ## [0.0.7] - 11 March 2025
 ### Fixed
 - Fix issue with grid CSS classes
