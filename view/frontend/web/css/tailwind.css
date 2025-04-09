@@ -827,6 +827,11 @@
   padding-bottom: 3.2rem;
 }
 
+:where(.loki) .py-2 {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
 :where(.loki) .pb-2 {
   padding-bottom: 0.8rem;
 }
