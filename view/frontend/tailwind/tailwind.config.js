@@ -11,14 +11,18 @@ const getModulePaths = () => {
     return execSync(command).toString().trim().split("\n");
 }
 
+const modulePaths = getModulePaths();
+console.log('Discovered module paths', modulePaths);
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        ...getModulePaths(),
+        ...modulePaths,
+        "./view/frontend/templates/*.phtml",
         "./view/frontend/templates/**/*.phtml",
         "./view/frontend/layout/*.xml",
     ],
-    important: ":where(.loki-checkout)",
+    important: ":where(.loki)",
     theme: {
         spacing,
         fontSize,
