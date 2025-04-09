@@ -7,7 +7,7 @@ const magentoRootResolver = require('./lib/magento-root');
 const magentoRoot = magentoRootResolver(configIni);
 
 const getModulePaths = () => {
-    const command = magentoRoot + '/bin/magento yireo:loki-checkout-luma:module-path'
+    const command = magentoRoot + '/bin/magento yireo:loki-checkout:module-path'
     return execSync(command).toString().trim().split("\n");
 }
 
