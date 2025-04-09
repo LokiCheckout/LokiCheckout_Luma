@@ -35,6 +35,11 @@ class ImportCssCommand extends Command
         $directoryRead = $this->directoryReadFactory->create('/');
 
         $pathDefinition = (string)$input->getArgument('path');
+        if (false === str_contains($pathDefinition, '::')) {
+            $output->writeln('/** Invalid module definition: "'.$pathDefinition.'" */');
+            return Command::FAILURE;
+        }
+
         list($moduleName, $moduleRelativePath) = explode('::', $pathDefinition);
 
         $modulePath = $this->componentRegistrar->getPath(ComponentRegistrar::MODULE, $moduleName);
