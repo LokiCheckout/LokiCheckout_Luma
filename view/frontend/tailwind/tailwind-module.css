@@ -24,8 +24,8 @@
         }
 
         /* Mimic the TailwindCSS preflight */
-        &
-            :is(
+
+        & :is(
                 blockquote,
                 dl,
                 dd,
@@ -86,8 +86,7 @@
             color: inherit;
         }
 
-        &
-            :is(
+        & :is(
                 button,
                 input:where([type="button"]),
                 input:where([type="reset"]),
@@ -104,6 +103,7 @@
         }
 
         /* Mimic tailwind forms */
+
         input.form-input,
         .form-textarea,
         .form-select,
@@ -117,10 +117,7 @@
             padding-inline-end: calc(
                 var(--icon-size) + var(--icon-offset) + 0.5ch
             );
-            background: var(--select-icon, var(--select-light-scheme))
-                var(--form-bg, theme("colors.white"))
-                var(--icon-position, right) var(--icon-offset)
-                center/var(--icon-size) no-repeat;
+            background: var(--select-icon, var(--select-light-scheme)) var(--form-bg, theme("colors.white")) var(--icon-position, right) var(--icon-offset) center/var(--icon-size) no-repeat;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
