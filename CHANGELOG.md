@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.9] - 09 April 2025
+### Fixed
+- Either return empty object or empty function
+- Remove checkout JS but only in the checkout
+- Fix look and feel of demo module
+- Restructure loki classes for Luma
+- Formatting
+- Handle error better
+- Fix module path in Taildwind Luma
+
 ## [0.0.8] - 04 April 2025
 ### Fixed
 - Move module-path command from Luma module to core module
