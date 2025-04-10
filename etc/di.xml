@@ -16,24 +16,4 @@
             </argument>
         </arguments>
     </type>
-
-    <type name="Magento\Framework\Console\CommandList">
-        <arguments>
-            <argument name="commands" xsi:type="array">
-                <item name="yireo:loki-checkout-luma:import-css" xsi:type="object">Yireo\LokiCheckoutLuma\Console\Command\ImportCssCommand</item>
-                <item name="yireo:loki-checkout-luma:module-path" xsi:type="object">Yireo\LokiCheckoutLuma\Console\Command\ModulePathCommand</item>
-            </argument>
-        </arguments>
-    </type>
-
-    <type name="Yireo\LokiCheckoutLuma\Console\Command\ModulePathCommand">
-        <arguments>
-            <argument name="relativePaths" xsi:type="array">
-                <item name="etc/loki_checkout.xml" xsi:type="string">etc/loki_checkout.xml</item>
-                <item name="etc/loki_components.xml" xsi:type="string">etc/loki_components.xml</item>
-                <item name="view/frontend/layout/" xsi:type="string">view/frontend/layout/*.xml</item>
-                <item name="view/frontend/templates/" xsi:type="string">view/frontend/templates/**/*.phtml</item>
-            </argument>
-        </arguments>
-    </type>
 </config>
