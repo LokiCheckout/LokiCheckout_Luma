@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.10] - 10 April 2025
+### Fixed
+- Remove obsolete commands
+- Rely on app/etc/loki-checkout.json for building PostCSS and Tailwind
+- Switch Tailwind build to using new file app/etc/loki-checkout.json
+
 ## [0.0.9] - 09 April 2025
 ### Fixed
 - Either return empty object or empty function
