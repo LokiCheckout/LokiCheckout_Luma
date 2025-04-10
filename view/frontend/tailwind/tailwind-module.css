@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*@magentoImport "Yireo_LokiCheckout::view/frontend/tailwind/tailwind-source.css";*/
+@magentoModuleImport "view/frontend/tailwind/tailwind-source.css";
 
 @layer base {
     :where(.loki) {
@@ -123,3 +123,6 @@
         }
     }
 }
+
+@magentoModuleImport "view/frontend/tailwind/tailwind-after.css";
+
