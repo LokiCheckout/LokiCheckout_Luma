@@ -311,10 +311,6 @@
   display: block;
 }
 
-[aria-busy].field .field-loader {
-  display: flex;
-}
-
 .form-select.loading {
   background-image: none;
 }
