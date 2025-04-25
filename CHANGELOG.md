@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.12] - 25 April 2025
+### Fixed
+- Duplicate safelisted order and grid classes to Luma
+
 ## [0.0.11] - 25 April 2025
 ### Fixed
 - Allow upgrading to LokiFieldComponents and LokiCheckout 1.0
