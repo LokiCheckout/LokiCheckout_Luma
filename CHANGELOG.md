@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.13] - 25 April 2025
+### Fixed
+- Attempt fix exclusion
+
 ## [0.0.12] - 25 April 2025
 ### Fixed
 - Duplicate safelisted order and grid classes to Luma
