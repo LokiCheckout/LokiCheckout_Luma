@@ -13,7 +13,5 @@
         <referenceContainer name="content">
             <block name="loki-checkout.required_modules" template="Yireo_LokiCheckoutLuma::required_modules.phtml" before="-"/>
         </referenceContainer>
-
-        <referenceBlock name="minicart" remove="true"/>
     </body>
 </page>
