@@ -15,3 +15,6 @@ bin/magento module:enable Yireo_LokiCheckoutLuma
 
 ## Setup
 See the official documentation for more instructions on how to setup things with Luma.
+
+## Further recommendations
+We strongly recommend installing the additional package `yireo/magento2-loki-checkout-hyva-skinny` to optimize your theme within the checkout.
