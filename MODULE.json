@@ -4,5 +4,6 @@
         "Yireo_LokiCheckout"
     ],
     "components": [],
-    "config": []
+    "config": [],
+    "tests": []
 }
