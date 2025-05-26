@@ -1,7 +1,9 @@
 {
     "modules": [
         "Magento_Store",
-        "Yireo_LokiCheckout"
+        "Yireo_LokiCheckout",
+        "Yireo_LokiComponents",
+        "Yireo_HyvaThemeAutoRegistration"
     ],
     "components": [],
     "config": [],
