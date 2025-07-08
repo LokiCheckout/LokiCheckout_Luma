@@ -1,6 +1,6 @@
 {
   "name": "yireo/magento2-loki-checkout-luma",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Luma compatibility for Loki Checkout",
   "keywords": [
     "loki-theme"

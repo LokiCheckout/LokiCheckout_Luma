@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.15] - 08 July 2025
+### Fixed
+- Update MODULE.json
+- Update composer category
+- Generate new MODULE.json with simple test count
+- Recommend skinny package
+- Allow PHP 8.4 in CI
+- Move removal of minicart to LumaSkinny module
+
 ## [0.0.14] - 25 April 2025
 ### Fixed
 - New build file
