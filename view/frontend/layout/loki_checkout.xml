@@ -3,15 +3,15 @@
     <head>
         <!--
         If you don't want to use Tailwind in Luma, use `<remove/>` to your own theme:
-        <remove src="Yireo_LokiCheckoutLuma/css/tailwind.css"/>
+        <remove src="LokiCheckout_Luma/css/tailwind.css"/>
         -->
-        <css src="Yireo_LokiCheckoutLuma/css/tailwind.css"/>
-        <css src="Yireo_LokiCheckoutLuma/js/requirejs-additional-config.js"/>
+        <css src="LokiCheckout_Luma/css/tailwind.css"/>
+        <css src="LokiCheckout_Luma/js/requirejs-additional-config.js"/>
     </head>
 
     <body>
         <referenceContainer name="content">
-            <block name="loki-checkout.required_modules" template="Yireo_LokiCheckoutLuma::required_modules.phtml" before="-"/>
+            <block name="loki-checkout.required_modules" template="LokiCheckout_Luma::required_modules.phtml" before="-"/>
         </referenceContainer>
     </body>
 </page>
