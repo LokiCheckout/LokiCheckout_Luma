@@ -2,19 +2,22 @@
 declare(strict_types=1);
 
 use Loki\Components\Factory\ViewModelFactory;
+use Loki\Components\Util\Block\CssClass;
 use LokiCheckout\Luma\ViewModel\RequiredModulesCheck;
 
 /** @var ViewModelFactory $viewModelFactory */
 /** @var RequiredModulesCheck $requiredModulesCheck */
+/** @var CssClass $css */
+
 $requiredModulesCheck = $viewModelFactory->create(RequiredModulesCheck::class);
 $errors = $requiredModulesCheck->getErrors();
 if (empty($errors)) {
     return;
 }
 ?>
-<div class="messages">
+<div class="<?= /* @noEscape */ $css('messages') ?>">
     <?php foreach ($errors as $error): ?>
-    <div class="message error">
+    <div class="<?= /* @noEscape */ $css('message error', 'message') ?>">
         <span><?= $error ?></span>
     </div>
     <?php endforeach; ?>
