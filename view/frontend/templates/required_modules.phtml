@@ -18,7 +18,7 @@ if (empty($errors)) {
 <div class="<?= /* @noEscape */ $css('messages') ?>">
     <?php foreach ($errors as $error): ?>
     <div class="<?= /* @noEscape */ $css('message error', 'message') ?>">
-        <span><?= $error ?></span>
+        <span><?= $escaper->escapeHtml($error) ?></span>
     </div>
     <?php endforeach; ?>
 </div>
