@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 21 August 2025
+### Fixed
+- Fix duplicate import
+- Declare used PHP namespaces
+- Document latest version of template
+
 ## [1.0.3] - 18 August 2025
 ### Fixed
 - Lower requirements to PHP 8.1
