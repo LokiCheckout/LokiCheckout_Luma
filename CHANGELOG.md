@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.8] - 28 August 2025
+### Fixed
+- Add NODE_ENV to package.json scripts
+
 ## [1.0.7] - 28 August 2025
 ### Fixed
 - Cleanup Tailwind whitelist
