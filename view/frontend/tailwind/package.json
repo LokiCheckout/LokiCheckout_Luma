@@ -17,8 +17,8 @@
     "> 0.2% and not dead"
   ],
   "scripts": {
-    "watch": "npx tailwindcss --postcss -i tailwind-module.css -o ../web/css/tailwind.css --watch --verbose",
-    "dev": "npx tailwindcss --postcss -i tailwind-module.css -o ../web/css/tailwind.css",
-    "build": "npx tailwindcss --postcss -i tailwind-module.css -o ../web/css/tailwind.css --minify"
+    "watch": "NODE_ENV=development npx tailwindcss --postcss -i tailwind-module.css -o ../web/css/tailwind.css --watch --verbose",
+    "dev": "NODE_ENV=development npx tailwindcss --postcss -i tailwind-module.css -o ../web/css/tailwind.css",
+    "build": "NODE_ENV=production npx tailwindcss --postcss -i tailwind-module.css -o ../web/css/tailwind.css --minify"
   }
 }
