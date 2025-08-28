@@ -30,8 +30,7 @@ lokiCheckoutModules.forEach(module => {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     safelist: [
-        { pattern: /col-span-\d/ },
-        { pattern: /order-\d/ }
+        'loki-col-span',
     ],
     content: [
         ...contentPaths,
