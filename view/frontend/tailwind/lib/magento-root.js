@@ -1,13 +1,27 @@
 const fs = require('fs');
 const configResolver = require('./config');
+const path = require('path');
+
+function getMagentoRoot(startDir = process.cwd()) {
+    let dir = fs.existsSync(startDir) ? fs.realpathSync(startDir) : path.resolve(startDir);
+
+    const diXmlPath = path.join(dir, 'app', 'etc', 'di.xml');
+    if (fs.existsSync(diXmlPath)) {
+        return dir;
+    }
+
+    const parent = path.dirname(dir);
+    if (parent === dir) {
+        return null;
+    }
+
+    return getMagentoRoot(parent);
+}
 
 module.exports = (configFile) => {
     const config = configResolver(configFile);
 
-    let magentoRoot = config.magentoRoot;
-    if (!magentoRoot) {
-        magentoRoot = '../../../../../../';
-    }
+    let magentoRoot = getMagentoRoot();
 
     if (!magentoRoot) {
         console.error('No Magento root defined');
@@ -19,10 +33,6 @@ module.exports = (configFile) => {
         process.exit();
     }
 
-    if (!fs.existsSync(magentoRoot + '/app/etc/env.php')) {
-        console.error('Magento root does not seem to contain Magento: ' + magentoRoot);
-        process.exit();
-    }
-
     return magentoRoot;
 }
+
