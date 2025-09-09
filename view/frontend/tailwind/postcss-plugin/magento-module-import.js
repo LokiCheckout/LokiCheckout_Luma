@@ -1,10 +1,9 @@
 const ini = require("ini");
 const fs = require('fs');
-const path = require('path');
 const {execSync} = require('child_process');
 
 const magentoRootResolver = require('../lib/magento-root');
-const magentoRoot = magentoRootResolver(path.resolve('./config.ini'));
+const magentoRoot = magentoRootResolver();
 
 const getLokiCheckoutModules = () => {
     const jsonFile = magentoRoot + '/app/etc/loki-checkout.json';

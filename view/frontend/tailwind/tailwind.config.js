@@ -3,9 +3,8 @@ const {execSync} = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
-const configIni = path.resolve('./config.ini');
 const magentoRootResolver = require('./lib/magento-root');
-const magentoRoot = magentoRootResolver(configIni);
+const magentoRoot = magentoRootResolver();
 
 const getLokiCheckoutModules = () => {
     const jsonFile = magentoRoot + '/app/etc/loki-checkout.json';

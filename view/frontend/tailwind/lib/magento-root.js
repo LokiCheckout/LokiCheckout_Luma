@@ -1,5 +1,4 @@
 const fs = require('fs');
-const configResolver = require('./config');
 const path = require('path');
 
 function getMagentoRoot(startDir = process.cwd()) {
@@ -18,9 +17,7 @@ function getMagentoRoot(startDir = process.cwd()) {
     return getMagentoRoot(parent);
 }
 
-module.exports = (configFile) => {
-    const config = configResolver(configFile);
-
+module.exports = () => {
     let magentoRoot = getMagentoRoot();
 
     if (!magentoRoot) {
