@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.10] - 16 September 2025
+### Fixed
+- Move page messages to fixed position in Luma
+
 ## [1.0.9] - 10 September 2025
 ### Fixed
 - Recursively find Magento root
