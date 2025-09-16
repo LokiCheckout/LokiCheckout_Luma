@@ -7,6 +7,7 @@
     ],
     "modules": [
         "LokiCheckout_Core",
+        "Loki_Base",
         "Loki_Components",
         "Loki_CssUtils",
         "Loki_FieldComponents",
