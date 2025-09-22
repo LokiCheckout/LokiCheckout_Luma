@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@magentoModuleImport "view/frontend/tailwind/tailwind-source.css";
+@magento-module-import "view/frontend/tailwind/tailwind-source.css";
 
 @layer base {
     :where(.loki) {
@@ -134,5 +134,5 @@
     }
 }
 
-@magentoModuleImport "view/frontend/tailwind/tailwind-after.css";
+@magento-module-import "view/frontend/tailwind/tailwind-after.css";
 

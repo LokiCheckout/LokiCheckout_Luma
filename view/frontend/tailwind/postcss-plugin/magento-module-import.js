@@ -38,7 +38,7 @@ module.exports = (opts = {}) => {
     return {
         postcssPlugin: 'YireoPostCssMagentoImport',
         Once (root) {
-            root.walkAtRules('magentoModuleImport', atRule => {
+            root.walkAtRules('magento-module-import', atRule => {
                 const moduleFile = atRule.params.replace(/"/g, '').trim();
                 const moduleCss = getModuleCss(moduleFile);
                 atRule.replaceWith(moduleCss);
