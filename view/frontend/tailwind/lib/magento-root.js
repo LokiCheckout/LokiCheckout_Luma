@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 function getMagentoRoot(startDir = process.cwd()) {
-    //return '/var/www/html';
     let dir = fs.existsSync(startDir) ? fs.realpathSync(startDir) : path.resolve(startDir);
 
     const diXmlPath = path.join(dir, 'app', 'etc', 'di.xml');
