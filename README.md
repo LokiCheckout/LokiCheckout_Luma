@@ -3,7 +3,7 @@
 **This is the core package for compatibility of the LokiCheckout with Luma.**
 
 ## Installation
-Install this package via composer (assuming you have setup the `composer.yireo.com` repository correctly already):
+Install this package via composer:
 ```bash
 composer require loki-checkout/magento2-luma
 ```
