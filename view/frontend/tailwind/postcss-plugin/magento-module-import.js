@@ -1,7 +1,7 @@
 const ini = require("ini");
 const fs = require('fs');
 const {execSync} = require('child_process');
-
+const path = require("path");
 const magentoRootResolver = require('../lib/magento-root');
 const magentoRoot = magentoRootResolver();
 
@@ -17,21 +17,49 @@ const getLokiCheckoutModules = () => {
 const lokiCheckoutModules = getLokiCheckoutModules();
 
 const getModuleCss = (moduleFile) => {
-    let moduleCss = '';
+    let allModuleCss = '';
     lokiCheckoutModules.forEach(module => {
         if (!module.enabled) {
             return;
         }
 
-        const moduleCssFile = module.path + '/' + moduleFile;
-        if (!fs.existsSync(moduleCssFile)) {
-            return;
+        const moduleCss = readCss(module.path + '/' + moduleFile);
+        if (moduleCss) {
+            allModuleCss = allModuleCss + moduleCss;
         }
-
-        moduleCss = moduleCss + fs.readFileSync(moduleCssFile).toString();
     });
 
-    return moduleCss;
+    return allModuleCss;
+}
+
+const readCss = (cssFile) => {
+    if (!fs.existsSync(cssFile)) {
+        return;
+    }
+
+    let css = fs.readFileSync(cssFile).toString();
+    if (!css) {
+        return;
+    }
+
+    const cssFolder = path.dirname(cssFile);
+    const importRegex = /@import\s+(?:url\()?['"]?([^'"\)]+)['"]?\)?\s*;/gi;
+    const imports = [];
+
+    const matches = [...css.matchAll(importRegex)];
+    if (matches && matches.length > 0) {
+        matches.forEach(match => {
+            const importFile = match[1];
+            const importCss = readCss(cssFolder + '/' + importFile);
+            if (importCss) {
+                css = css.replace(match[0], importCss);
+            } else {
+                css = css.replace(match[0], '');
+            }
+        });
+    }
+
+    return css;
 }
 
 module.exports = (opts = {}) => {
@@ -41,7 +69,11 @@ module.exports = (opts = {}) => {
             root.walkAtRules('magento-module-import', atRule => {
                 const moduleFile = atRule.params.replace(/"/g, '').trim();
                 const moduleCss = getModuleCss(moduleFile);
-                atRule.replaceWith(moduleCss);
+                if (moduleCss) {
+                    atRule.replaceWith(moduleCss);
+                } else {
+                    atRule.replaceWith('');
+                }
             });
         },
     }
