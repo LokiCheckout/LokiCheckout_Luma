@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.12] - 27 September 2025
+### Fixed
+- Allow @import of Tailwind CSS within Luma build (which currently leads into other issues)
+- Allow detected Magento root via env var `MAGENTO_ROOT`
+- Update README
+
 ## [1.0.11] - 24 September 2025
 ### Fixed
 - Rename magentoModuleImport to magento-module-import
@@ -20,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.8] - 28 August 2025
 ### Fixed
-- Add NODE_ENV to package.json scripts
+- Add `NODE_ENV` to package.json scripts
 
 ## [1.0.7] - 28 August 2025
 ### Fixed
