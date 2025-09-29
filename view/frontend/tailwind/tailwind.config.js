@@ -23,7 +23,7 @@ lokiCheckoutModules.forEach(module => {
     contentPaths.push(modulePath + '/view/frontend/templates/*.phtml');
     contentPaths.push(modulePath + '/view/frontend/templates/**/*.phtml');
     contentPaths.push(modulePath + '/view/frontend/layout/*.xml');
-    contentPaths.push(modulePath + '/view/frontend/tailwind/**/*.css');
+    contentPaths.push(modulePath + '/view/frontend/tailwind/*.css');
     contentPaths.push(modulePath + '/etc/loki_components.xml');
     contentPaths.push(modulePath + '/etc/loki_checkout.xml');
 });
