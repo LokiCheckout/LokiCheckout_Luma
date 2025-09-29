@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.13] - 29 September 2025
+### Fixed
+- Skip adding content of CSS of Luma module itself, because it is the start of things anyway
+- Make sure to only include one single CSS file per module
+- Fix Tailwind build under Luma by reusing Hyva config partially
+
 ## [1.0.12] - 27 September 2025
 ### Fixed
 - Allow @import of Tailwind CSS within Luma build (which currently leads into other issues)
