@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.15] - 30 September 2025
+### Fixed
+- Fix styling of list items 
+
 ## [1.0.14] - 30 September 2025
 ### Fixed
 - Add margin-top to messages to look good under Luma
