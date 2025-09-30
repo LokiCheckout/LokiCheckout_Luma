@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.14] - 30 September 2025
+### Fixed
+- Add margin-top to messages to look good under Luma
+- Remove fixed positioning of messages
+
 ## [1.0.13] - 29 September 2025
 ### Fixed
 - Skip adding content of CSS of Luma module itself, because it is the start of things anyway
