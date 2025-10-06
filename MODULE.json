@@ -2,8 +2,8 @@
     "sequence": [
         "LokiCheckout_Core",
         "Loki_Components",
-        "Magento_Store",
-        "Yireo_HyvaThemeAutoRegistration"
+        "Loki_CssUtils",
+        "Magento_Store"
     ],
     "modules": [
         "LokiCheckout_Core",
@@ -27,11 +27,10 @@
         "Magento_Shipping",
         "Magento_Store",
         "Magento_Vault",
-        "Yireo_CspUtilities"
+        "Yireo_CspUtilities",
+        "Yireo_HyvaThemeAutoRegistration"
     ],
     "components": [],
     "config": [],
-    "tests": [],
-    "phpcs_severity": "8",
-    "phpstan_level": "5"
+    "tests": []
 }
