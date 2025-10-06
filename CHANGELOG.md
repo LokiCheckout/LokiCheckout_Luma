@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.16] - 06 October 2025
+### Fixed
+- Better aligning of input button with shipping methods in JS
+- Fix wrong margin of shipping method items under Luma
+- Fix hover on payment method item to cause little bump in demo-module
+
 ## [1.0.15] - 30 September 2025
 ### Fixed
 - Fix styling of list items 
