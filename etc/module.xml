@@ -4,8 +4,8 @@
         <sequence>
             <module name="LokiCheckout_Core"/>
             <module name="Loki_Components"/>
+            <module name="Loki_CssUtils"/>
             <module name="Magento_Store"/>
-            <module name="Yireo_HyvaThemeAutoRegistration"/>
         </sequence>
     </module>
 </config>
