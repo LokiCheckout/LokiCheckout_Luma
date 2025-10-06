@@ -8,12 +8,4 @@
             </argument>
         </arguments>
     </type>
-
-    <type name="Yireo\HyvaThemeAutoRegistration\Observer\RegisterModuleForHyvaConfig">
-        <arguments>
-            <argument name="skipModules" xsi:type="array">
-                <item name="LokiCheckout_Luma" xsi:type="string">LokiCheckout_Luma</item>
-            </argument>
-        </arguments>
-    </type>
 </config>
