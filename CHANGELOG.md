@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.18] - 07 October 2025
+### Fixed
+- Add appearance:none to input switch
+- Add translations
+- CSS build
+
 ## [1.0.17] - 06 October 2025
 ### Fixed
 - Override absolute position of product image in sidebar given by Luma LESS
