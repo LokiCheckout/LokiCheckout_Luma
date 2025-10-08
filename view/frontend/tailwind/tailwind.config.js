@@ -20,10 +20,6 @@ const contentPaths = [];
 const lokiCheckoutModules = getLokiCheckoutModules();
 lokiCheckoutModules.forEach(module => {
     const modulePath = module.path;
-    if (modulePath + '/view/frontend/tailwind' === __dirname) {
-        return;
-    }
-
     contentPaths.push(modulePath + '/view/frontend/templates/*.phtml');
     contentPaths.push(modulePath + '/view/frontend/templates/**/*.phtml');
     contentPaths.push(modulePath + '/view/frontend/layout/*.xml');
@@ -39,9 +35,6 @@ module.exports = {
     ],
     content: [
         ...contentPaths,
-        "./view/frontend/templates/*.phtml",
-        "./view/frontend/templates/**/*.phtml",
-        "./view/frontend/layout/*.xml",
     ],
     important: ":where(.loki)",
     theme: {
