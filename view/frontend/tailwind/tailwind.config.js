@@ -1,7 +1,5 @@
 const {spacing, fontSize, borderRadius} = require("./tailwind.helper");
 const colors = require('tailwindcss/colors');
-const {execSync} = require('child_process');
-const path = require('path');
 const fs = require('fs');
 
 const magentoRootResolver = require('./lib/magento-root');
