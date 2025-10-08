@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.20] - 08 October 2025
+### Fixed
+- Allow sorting of children via block argument "sort_order"
+- Fix product-image-photo width in Luma
+- Remove debug message
+
 ## [1.0.19] - 08 October 2025
 ### Fixed
 - Beuatify positioning of agreements in Optimized Theme of demo
