@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.19] - 08 October 2025
+### Fixed
+- Beuatify positioning of agreements in Optimized Theme of demo
+- Cleanup
+- Simplify contentPaths in configuration
+- New CSS build
+
 ## [1.0.18] - 07 October 2025
 ### Fixed
 - Add appearance:none to input switch
