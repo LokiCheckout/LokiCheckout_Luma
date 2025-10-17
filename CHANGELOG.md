@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.22] - 17 October 2025
+### Fixed
+- Optimize demo build
+- Tailwind build
+- WIP
+
 ## [1.0.21] - 08 October 2025
 ### Fixed
 - Turn margins into gaps
