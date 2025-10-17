@@ -27,8 +27,7 @@
         "Magento_Shipping",
         "Magento_Store",
         "Magento_Vault",
-        "Yireo_CspUtilities",
-        "Yireo_HyvaThemeAutoRegistration"
+        "Yireo_CspUtilities"
     ],
     "components": [],
     "config": [],
