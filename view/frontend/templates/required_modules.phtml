@@ -21,9 +21,9 @@ if (empty($errors)) {
     return;
 }
 ?>
-<div class="<?= $escaper->escapeHtmlAttr($css('messages')) ?>">
+<div class="<?= $escaper->escapeHtml($css('messages')) ?>">
     <?php foreach ($errors as $error): ?>
-    <div class="<?= $escaper->escapeHtmlAttr($css('message error', 'message')) ?>">
+    <div class="<?= $escaper->escapeHtml($css('message error', 'message')) ?>">
         <span><?= $escaper->escapeHtml($error) ?></span>
     </div>
     <?php endforeach; ?>
