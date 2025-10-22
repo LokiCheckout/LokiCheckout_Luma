@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.23] - 22 October 2025
+### Fixed
+- Do not escape `$css()` with `escapeHtmlAttr()` but `escapeHtml()`
+
 ## [1.0.22] - 17 October 2025
 ### Fixed
 - Optimize demo build
