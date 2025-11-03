@@ -3,9 +3,8 @@
     "version": "1.0.23",
     "description": "Luma compatibility for Loki Checkout",
     "keywords": [
-        "loki-theme",
         "loki-checkout",
-        "loki-checkout-core"
+        "loki-checkout-category-theme"
     ],
     "homepage": "https://loki-checkout.com/",
     "authors": [
