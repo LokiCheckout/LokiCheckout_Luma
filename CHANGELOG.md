@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.24] - 03 November 2025
+### Fixed
+- Add dep with yireo/magento2-theme-by-route
+- Update composer keywords
+
 ## [1.0.23] - 22 October 2025
 ### Fixed
 - Do not escape `$css()` with `escapeHtmlAttr()` but `escapeHtml()`
