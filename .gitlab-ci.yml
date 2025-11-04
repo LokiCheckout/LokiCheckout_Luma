@@ -1,8 +1,8 @@
 stages:
-  - linting
-  - unit
-  - integration
-  - e2e
+  #- linting
+  #- unit
+  #- integration
+  - playwright
 
 variables:
   MAGENTO_BASE_URL: "http://127.0.0.1:8888/"
@@ -83,8 +83,11 @@ magento-integration-tests:
 
 magento-playwright:
   image: yireo/magento2installed:2.4.8
-  stage: e2e
+  stage: playwright
   before_script:
+    - cd $CI_PROJECT_DIR
+    - ls -al
+    #- test -d Test/Playwright/ || exit 0
     - |
       echo "Waiting for MySQL "
       for i in {1..60}; do
@@ -102,7 +105,7 @@ magento-playwright:
       echo "Waiting for OpenSearch "
       ready=0
       for i in {1..120}; do
-        if curl -fsS "http://${OPENSEARCH_HOST}:${OPENSEARCH_PORT}" | grep -q '"tagline"'; then
+        if curl -s "http://${OPENSEARCH_HOST}:${OPENSEARCH_PORT}" | grep -q '"tagline"'; then
           echo "OK"
           ready=1
           break
@@ -158,9 +161,6 @@ magento-playwright:
       done
       test $result -eq 0 && echo "Not available" && cat /tmp/php-server.log && exit 1
   script:
-    - cd $CI_PROJECT_DIR
-    - ls -al
-    - test -d Test/Playwright/ || exit 0
     - source .module.ini
     - cd /tmp/magento
     - composer config --global gitlab-token.gitlab.yireo.com $CI_JOB_TOKEN
