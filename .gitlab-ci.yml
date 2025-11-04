@@ -5,9 +5,6 @@ stages:
   - e2e
 
 variables:
-  ES_JAVA_OPTS: "-Xms128m -Xmx512m"
-  ES_SETTING_DISCOVERY_TYPE: "single-node"
-  ES_SETTING_XPACK_SECURITY_ENABLED: "false"
   MAGENTO_BASE_URL: "http://127.0.0.1:8888/"
   MAGENTO_BACKEND_FRONTNAME: "admin"
   MAGENTO_ADMIN_FIRSTNAME: "CI"
@@ -28,8 +25,9 @@ variables:
   MYSQL_DATABASE: magento2
   MYSQL_ROOT_PASSWORD: root
   MYSQL_PORT: "3306"
-  ES_HOST: "opensearch"
-  ES_PORT: "9200"
+  OPENSEARCH_HOST: "opensearch"
+  OPENSEARCH_PORT: "9200"
+  OPENSEARCH_JAVA_OPTS: "-Xms128m -Xmx128m"
 
 php-linting:
   image: yireo/php-testbox:$PHP_VERSION
@@ -102,16 +100,20 @@ magento-playwright:
       mysql -h"${MYSQL_HOST}" -P"${MYSQL_PORT}" -uroot -p"${MYSQL_ROOT_PASSWORD}" -e "GRANT ALL ON ${MYSQL_DATABASE}.* TO '${MYSQL_USER}'@'%'; FLUSH PRIVILEGES;"
 
       echo "Waiting for OpenSearch "
-      result=0
-      for i in {1..60}; do
-        if curl -s "http://${ES_HOST}:${ES_PORT}" | grep -q '"tagline"'; then
-          echo "OK"; result=1; break
+      ready=0
+      for i in {1..120}; do
+        if curl -fsS "http://${OPENSEARCH_HOST}:${OPENSEARCH_PORT}" | grep -q '"tagline"'; then
+          echo "OK"
+          ready=1
+          break
         fi
         echo -n "."
         sleep 1
       done
-      echo "NOT OK"
-      #test $result -eq 0 && echo "Not available" && exit 1
+      if [ "${ready:-0}" -ne 1 ]; then
+        echo "OpenSearch NOT OK"
+        exit 1
+      fi
 
       cd /tmp/magento
       php -dmemory_limit=-1 bin/magento setup:install \
@@ -131,16 +133,16 @@ magento-playwright:
         --timezone="${MAGENTO_TIMEZONE}" \
         --use-rewrites="${MAGENTO_USE_REWRITES}" \
         --search-engine="${MAGENTO_SEARCH_ENGINE}" \
-        --elasticsearch-host="${ES_HOST}" \
-        --elasticsearch-port="${ES_PORT}" \
+        --opensearch-host="${OPENSEARCH_HOST}" \
+        --opensearch-port="${OPENSEARCH_PORT}" \
         --session-save=redis \
         --session-save-redis-host=redis \
         --session-save-redis-port=6379 \
         --cache-backend-redis-server=redis \
         --cache-backend-redis-port=6379 \
 
-      #php -dmemory_limit=-1 bin/magento setup:di:compile
-      #php -dmemory_limit=-1 bin/magento setup:static-content:deploy -f
+      php -dmemory_limit=-1 bin/magento setup:di:compile
+      php -dmemory_limit=-1 bin/magento setup:static-content:deploy -f
 
       cd /tmp/magento/pub/
       nohup php -S 0.0.0.0:8888 >/tmp/php-server.log 2>&1 &
@@ -181,8 +183,6 @@ magento-playwright:
       alias: mysql
     - name: redis:latest
       alias: redis
-    - name: yireo/opensearch-dummy
-      alias: opensearch-dummy
     - name: yireo/opensearch
       alias: opensearch
 
