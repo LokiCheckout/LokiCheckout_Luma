@@ -1,7 +1,7 @@
 stages:
-  #- linting
-  #- unit
-  #- integration
+  - linting
+  - unit
+  - integration
   - playwright
 
 variables:
@@ -87,7 +87,7 @@ magento-playwright:
   before_script:
     - cd $CI_PROJECT_DIR
     - ls -al
-    #- test -d Test/Playwright/ || exit 0
+    - test -d Test/Playwright/ || exit 0
     - |
       echo "Waiting for MySQL "
       for i in {1..60}; do
@@ -154,7 +154,9 @@ magento-playwright:
       result=0
       for i in {1..60}; do
         if curl -s "${MAGENTO_BASE_URL}" 2>1 >/dev/null; then
-          echo "OK"; result=1; break
+          echo " OK, available"
+          result=1
+          break
         fi
         echo -n "."
         sleep 1
@@ -168,7 +170,7 @@ magento-playwright:
     - composer config repositories.local-source path $CI_PROJECT_DIR
     - composer require --prefer-source -- $COMPOSER_NAME:@dev loki-checkout/magento2-functional-tests:@dev yireo/magento2-enable-module-sequence
     - bin/magento module:enable Yireo_EnableModuleSequence
-    - bin/magento module:enable:sequence ${EXTENSION_VENDOR}_${EXTENSION_NAME}
+    - bin/magento module:sequence ${EXTENSION_VENDOR}_${EXTENSION_NAME}
     - bin/magento setup:upgrade
     - bin/magento config:set loki_functional_tests/general/token loki
     - cd vendor/loki-checkout/magento2-functional-tests/Test/Playwright/
