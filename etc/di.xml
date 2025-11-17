@@ -8,4 +8,12 @@
             </argument>
         </arguments>
     </type>
+
+    <type name="LokiTheme\LumaComponents\Config\RequestConfig">
+        <arguments>
+            <argument name="allowedRoutes" xsi:type="array">
+                <item name="checkout" xsi:type="string">checkout/index/index</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
