@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.25] - 21 November 2025
+### Fixed
+- Force Loki Theme Kit upon Luma as soon as LokiTheme_LumaComponents as enabled
+- Remove dep with Yireo ThemeByRoute
+- Add plan-trial keyword to composer file
+- Working copy
+- Fix OpenSearch in GitLab CI YAML
+- Fix OpenSearch settings in GitLab CI
+- Switch to real ES version
+
 ## [1.0.24] - 03 November 2025
 ### Fixed
 - Add dep with yireo/magento2-theme-by-route
