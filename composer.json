@@ -23,7 +23,9 @@
         "magento/module-store": "^101.0"
     },
     "suggest": {
-        "loki-checkout/magento2-luma-skinny": "Skin down your Luma theme to optimize the checkout"
+        "loki-theme/magento2-luma-components": "Replace Luma legacy JavaScript with modern JS components",
+        "loki-checkout/magento2-luma-skinny": "Skin down your Luma theme to optimize the checkout",
+        "yireo/magento2-theme-by-route": "Apply a specific theme to a specific route only"
     },
     "license": "OSL-3.0",
     "autoload": {
