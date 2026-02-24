@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.27] - 24 February 2026
+### Fixed
+- Fix Tailwind build for relative paths in loki-checkout.json
+- Pending changes
+- Copy generic CI/CD files
+
 ## [1.0.26] - 02 December 2025
 ### Fixed
 - Suggest yireo/magento2-theme-by-route

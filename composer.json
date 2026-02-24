@@ -1,6 +1,6 @@
 {
     "name": "loki-checkout/magento2-luma",
-    "version": "1.0.26",
+    "version": "1.0.27",
     "description": "Luma compatibility for Loki Checkout",
     "keywords": [
         "loki-checkout",
