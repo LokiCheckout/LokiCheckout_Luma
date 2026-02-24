@@ -17,7 +17,11 @@ const getLokiCheckoutModules = () => {
 const contentPaths = [];
 const lokiCheckoutModules = getLokiCheckoutModules();
 lokiCheckoutModules.forEach(module => {
-    const modulePath = module.path;
+    let modulePath = module.path;
+    if (!modulePath.startsWith('/')) {
+        modulePath = magentoRoot +  '/' + modulePath;
+    }
+
     contentPaths.push(modulePath + '/view/frontend/templates/*.phtml');
     contentPaths.push(modulePath + '/view/frontend/templates/**/*.phtml');
     contentPaths.push(modulePath + '/view/frontend/layout/*.xml');

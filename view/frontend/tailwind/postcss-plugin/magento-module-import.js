@@ -23,7 +23,12 @@ const getModuleCss = (moduleFile) => {
             return;
         }
 
-        const moduleCss = readCss(module.path + '/' + moduleFile);
+        let modulePath = module.path;
+        if (!modulePath.startsWith('/')) {
+            modulePath = magentoRoot +  '/' + modulePath;
+        }
+
+        const moduleCss = readCss(modulePath + '/' + moduleFile);
         if (moduleCss) {
             allModuleCss = allModuleCss + moduleCss;
         }
