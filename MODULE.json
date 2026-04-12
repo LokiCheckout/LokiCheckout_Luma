@@ -31,5 +31,7 @@
     ],
     "components": [],
     "config": [],
-    "tests": []
+    "tests": [],
+    "module_name": "LokiCheckout_Luma",
+    "composer_name": "loki-checkout/magento2-luma"
 }
