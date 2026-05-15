@@ -1,7 +1,7 @@
 {
     "name": "loki-checkout/magento2-luma",
     "version": "1.0.27",
-    "description": "Luma compatibility for Loki Checkout",
+    "description": "Luma compatibility including Tailwind CSS compilation",
     "keywords": [
         "loki-checkout",
         "loki-checkout-plan-trial",
