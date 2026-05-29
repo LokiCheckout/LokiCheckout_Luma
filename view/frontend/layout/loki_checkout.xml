@@ -6,7 +6,6 @@
         <remove src="LokiCheckout_Luma/css/tailwind.css"/>
         -->
         <css src="LokiCheckout_Luma/css/tailwind.css"/>
-        <css src="LokiCheckout_Luma/js/requirejs-additional-config.js"/>
     </head>
 
     <body>
