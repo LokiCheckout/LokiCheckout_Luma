@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.28] - 01 June 2026
+### Fixed
+- Remove JS removal in favor of Loki Theme Kit
+- Add composer description
+
 ## [1.0.27] - 24 February 2026
 ### Fixed
 - Fix Tailwind build for relative paths in loki-checkout.json
