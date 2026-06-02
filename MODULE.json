@@ -33,5 +33,7 @@
     "config": [],
     "tests": [],
     "module_name": "LokiCheckout_Luma",
-    "composer_name": "loki-checkout/magento2-luma"
+    "composer_name": "loki-checkout/magento2-luma",
+    "phpcs_severity": "6",
+    "phpstan_level": "5"
 }
