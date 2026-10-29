@@ -22,3 +22,5 @@ tailwind/config.ini
 .playwright
 .opencode
 .gitlab-ci-local
+.playwright
+.opencode
