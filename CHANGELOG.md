@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.29] - 03 November 2026
+### Fixed
+- Refer to app/etc/loki.json, not app/etc/loki-checkout.json
+
 ## [1.0.28] - 01 June 2026
 ### Fixed
 - Remove JS removal in favor of Loki Theme Kit
