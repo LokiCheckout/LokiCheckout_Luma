@@ -8,12 +8,6 @@
         "loki-checkout-category-theme"
     ],
     "homepage": "https://loki-checkout.com/",
-    "authors": [
-        {
-            "name": "Jisse Reitsma (Yireo)",
-            "email": "jisse@yireo.com"
-        }
-    ],
     "type": "magento2-module",
     "require": {
         "loki-checkout/magento2-core": "^2.0",
