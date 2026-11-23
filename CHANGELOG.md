@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.31] - 23 November 2026
+### Fixed
+- Undo refer to `loki.json` and just use `loki-checkout.json`
+
 ## [1.0.30] - 08 November 2026
 ### Fixed
 - Hide x-cloak elements to prevent loader overlays flashing on page load
