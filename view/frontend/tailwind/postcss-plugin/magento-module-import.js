@@ -6,9 +6,9 @@ const magentoRootResolver = require('../lib/magento-root');
 const magentoRoot = magentoRootResolver();
 
 const getLokiCheckoutModules = () => {
-    const jsonFile = magentoRoot + '/app/etc/loki.json';
+    const jsonFile = magentoRoot + '/app/etc/loki-checkout.json';
     if (!fs.existsSync(jsonFile)) {
-        throw new Error('Could not find file "app/etc/loki.json"');
+        throw new Error('Could not find file "app/etc/loki-checkout.json"');
     }
 
     return JSON.parse(fs.readFileSync(jsonFile).toString());
